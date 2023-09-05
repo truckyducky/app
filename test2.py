@@ -147,4 +147,4 @@ except:
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
 # Load HTML file in HTML component for display on Streamlit page
-components.html(HtmlFile.read(), height=800, width = 800)
+components.html(HtmlFile.read(), height=1000, width = 1000)
