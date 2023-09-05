@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import networkx as nx
 from pyvis.network import Network
-from IPython.core.display import display, HTML
+
 
 #setup network
 net = Network(notebook = True, cdn_resources="remote",height="900px", width="90%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c", heading = "Interactive Network of HEAL Core CDEs")
