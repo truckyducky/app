@@ -7,7 +7,7 @@ from pyvis.network import Network
 
 #setup network
 st.title("Interactive Network of HEAL Core CDEs")
-net = Network(notebook = True, cdn_resources="remote",height="800px", width="1000px", filter_menu=True,font_color="white", bgcolor = "#373a3c")
+net = Network(notebook = True, cdn_resources="remote",height="800px", width="100%", filter_menu=True,font_color="white", bgcolor = "#373a3c")
 
 
 #add categorical/subcategorical nodes
@@ -157,6 +157,18 @@ cde_list = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_cdes = st.multiselect('Select HEAL Common Core CDEs to visualize', cde_list)
+
+
+# Set info message on initial site load
+if len(selected_cdes) == 0:
+    st.text('Choose at least 1 drug to start')
+
+
+# Create network graph when user selects >= 1 item
+else:
+    df_select = df_interact.loc[df_interact['cde_1_name'].isin(selected_cdes) | \
+                                df_interact['cde_2_name'].isin(selected_cdes)]
+    df_select = df_select.reset_index(drop=True)
 
 net.repulsion(spring_strength = 0)
 net.show("edges.html")
