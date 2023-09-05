@@ -8,7 +8,9 @@ from pyvis.network import Network
 
 #setup network
 st.title("Interactive Network of HEAL Core CDEs")
-st.set_page_config(layout=‘wide’)
+def do_stuff_on_page_load(...):
+    st.set_page_config(layout="wide")
+    
 net = Network(notebook = True, cdn_resources="remote",height="800px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
 
 
