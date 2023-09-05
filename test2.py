@@ -1,10 +1,7 @@
 #setting up packages
 import streamlit as st
 import streamlit.components.v1 as components
-import pandas as pd
 import networkx as nx
-import datapane as dp
-from stvis import pv_static
 from pyvis.network import Network
 from IPython.core.display import display, HTML
 
