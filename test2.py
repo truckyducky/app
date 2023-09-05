@@ -165,12 +165,6 @@ if len(selected_cdes) == 0:
     st.text('Choose at least 1 drug to start')
 
 
-# Create network graph when user selects >= 1 item
-else:
-    df_select = df_interact.loc[df_interact['cde_1_name'].isin(selected_cdes) | \
-                                df_interact['cde_2_name'].isin(selected_cdes)]
-    df_select = df_select.reset_index(drop=True)
-
 net.repulsion(spring_strength = 0)
 net.show("edges.html")
 
