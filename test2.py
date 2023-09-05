@@ -6,7 +6,8 @@ from pyvis.network import Network
 
 
 #setup network
-net = Network(notebook = True, cdn_resources="remote",height="900px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c", heading = "Interactive Network of HEAL Core CDEs")
+st.title("Interactive Network of HEAL Core CDEs")
+net = Network(notebook = True, cdn_resources="remote",height="900px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
 
 
 #add categorical/subcategorical nodes
