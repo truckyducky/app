@@ -40,9 +40,31 @@ net.add_nodes(['1 - General Health',
 
 )
 
-#adding nodes about common CDEs
-
-net.add_nodes([12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+#adding nodes about common CDEs 12-35
+net.add_nodes(['12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
+             '13 - Brief Pain Inventory - Interference [BPI-Interference]',
+             '14 - Brief Pain Inventory - Severity [BPI-Severity]',
+             '15 - Demographics - Adult [Demographics-A]',
+             '16 - Demographics - Adult, Revised [Demographics-A Revised]',
+             '17 - Demographics - Pediatric [Demographics-Peds]',
+             '18 - Demographics - Pediatric, revised [Demographics-Peds Revised]',
+             '19 - Generalized Anxiety Disorder - 2 Items [GAD-2]', 
+             '20 - Generalized Anxiety Disorder - 7 Items [GAD-7]',
+             '21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]',
+             '22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]', 
+             '23 - Pain Catastrophizing Scale - Parent [PCS-Parent]',
+             '24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]',
+             '25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]',
+             '26 - Pain, Enjoyment, General Activity [PEG]',
+             '27 - Patient Global Impression of Change [PGIC]',
+             '28 - Patient Health Questionnaire - 2 items [PHQ-2]',
+             '29 - Patient Health Questionnaire - 8 Items [PHQ-8]',
+             '30 - Patient Health Questionnaire - Full Assessment 9 Items [PHQ-9]',
+             '31 - Pediatric Quality of Life Inventory [PedsQL]',
+             '32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]',
+             '33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]',
+             '34 - Sleep Duration Question [SD - Adult or Peds]',
+             '35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'],
     label = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
              'Brief Pain Inventory - Interference [BPI-Interference]',
              'Brief Pain Inventory - Severity [BPI-Severity]',
@@ -70,6 +92,7 @@ net.add_nodes([12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22, 23, 24, 25, 26, 27, 28
     color = ['#e07c3e', '#e07c3e','#e07c3e', '#e07c3e', '#e07c3e', '#e07c3e', '#e07c3e','#e07c3e','#e07c3e', '#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e','#e07c3e'],
     size = [20, 40, 40, 60, 20, 20, 20, 40, 40, 20, 40, 20, 20, 40, 60, 60, 40, 20, 20, 20, 60, 60, 60, 60]
 )
+
 
 #adding connections
 
