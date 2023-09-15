@@ -12,7 +12,17 @@ net = Network(notebook = True, cdn_resources="remote",height="800px", width="100
 
 
 #add categorical/subcategorical nodes
-net.add_nodes(['1 - General Health', 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+net.add_nodes(['1 - General Health', 
+               '2 - Patient Health', 
+               '3 - Pain',  
+               '4 - Sleep', 
+               '5 - Substance Use', 
+               '6 - Mental Health',
+               '7 - Quality of Life',
+               '8 - Demographics', 
+               '9 - Adults', 
+               '10 - Adolescent', 
+               '11 - Pediatric'],
     label = ['General Health',
              'Patient Health',
              'Pain',
