@@ -97,21 +97,36 @@ net.add_nodes(['12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Du
 #adding connections
 
 net.add_edges([
-    (1,2),(1,3),(1,4),(1,5),(1,6),(1,7),
-    (2,28),(2,29),(2,30),
-    (3,13),(3,14),(3,22),(3,23),(3,24),(3,25),
-    (4,12),(4,33),(4,34),
-    (5, 21),(5, 35),
-    (6, 19),(6,20),(6,27),
-    (7, 31),(7,26),
-    (8, 9),(8, 10),(8,11),
-    (9, 15),(9, 16),(9,23),
-    (10, 12),
-    (11, 17),(11,18),
-    (12,4),(11,24),
+    ('1 - General Health','2 - Patient Health'), 
+    ('1 - General Health','3 - Pain'),
+    ('1 - General Health','4 - Sleep'),
+    ('1 - General Health','5 - Substance Use'),
+    ('1 - General Health','6 - Mental Health'),
+    ('1 - General Health','7 - Quality of Life'),
+    ('2 - Patient Health', '28 - Patient Health Questionnaire - 2 items [PHQ-2]'),
+    ('2 - Patient Health','29 - Patient Health Questionnaire - 8 Items [PHQ-8]'),
+    ('2 - Patient Health','30 - Patient Health Questionnaire - Full Assessment 9 Items [PHQ-9]'),
+    ('3 - Pain','13 - Brief Pain Inventory - Interference [BPI-Interference]'),
+    ('3 - Pain','14 - Brief Pain Inventory - Severity [BPI-Severity]'),
+    ('3 - Pain','22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]'),
+    ('3 - Pain','23 - Pain Catastrophizing Scale - Parent [PCS-Parent]'),
+    ('3 - Pain','24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]'),
+    ('3 - Pain','25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]'),
+    ('4 - Sleep','12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]'),
+    ('4 - Sleep','33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]'),
+    ('4 - Sleep','34 - Sleep Duration Question [SD - Adult or Peds]'),
+    ('5 - Substance Use', '21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]'),('5 - Substance Use', '35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'),
+    ('6 - Mental Health', '19 - Generalized Anxiety Disorder - 2 Items [GAD-2]'),('6 - Mental Health','20 - Generalized Anxiety Disorder - 7 Items [GAD-7]'),('6 - Mental Health','27 - Patient Global Impression of Change [PGIC]'),
+    ('7 - Quality of Life', '31 - Pediatric Quality of Life Inventory [PedsQL]'),('7 - Quality of Life','26 - Pain, Enjoyment, General Activity [PEG]'),
+    ('8 - Demographics', '9 - Adults'),('8 - Demographics', '10 - Adolescent'),('8 - Demographics','11 - Pediatric'),
+    ('9 - Adults', '15 - Demographics - Adult [Demographics-A]'),('9 - Adults', '16 - Demographics - Adult, Revised [Demographics-A Revised]'),('9 - Adults','23 - Pain Catastrophizing Scale - Parent [PCS-Parent]'),
+    ('10 - Adolescent', '12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]'),
+    ('11 - Pediatric', '17 - Demographics - Pediatric [Demographics-Peds]'),('11 - Pediatric','18 - Demographics - Pediatric, revised [Demographics-Peds Revised]'),
+    ('12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','4 - Sleep'),('11 - Pediatric','24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]'),
     
 ]
 )
+
 
 #adding the research programs
 net.add_node(36, label='Biomarkers', color = '#532565', shape = 'triangle', size = 25)
