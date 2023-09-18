@@ -413,7 +413,16 @@ net.add_edges([
 
 
 # # Set info message on initial site load
-st.text('Interactive Knowledge Graph illustrates the CDEs into three main categories: General Health, Demographics, and Research Programs. These nodes are magenta and ellipsed-shaped. General Health divides up into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life. Demographics are separated based on age range: Adults, Adolescent, and Pediatric. These subcategories are purple ellipsed-shaped nodes. Each CDE is connected to a single or multiple subcategories depending on their purpose/application. The orange circle nodes represent each Core CDE. The size of the nodes depicts the count of the Core CDEs used. The size gradients contain four ranges from least to most: 0-19, 20-49, 50-79, and 80-100 counts. As for the Research Programs, they are purple and triangle-shaped nodes. Respectively, each research program is connected to multiple Core CDEs. With this interactive knowledge graph, you can click on individual nodes to highlight specific ones or search a node using its ID. If ID is unknown, you can search by node/edge and color/font/id/label/shape/size. As a final note, the interactive knowledge graph is still being refined to improve efficient searches and logic.  ')
+st.text('Interactive Knowledge Graph illustrates the CDEs into three main categories: General Health, Demographics, and Research Programs. 
+These nodes are magenta and ellipsed-shaped. General Health divides up into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life. 
+Demographics are separated based on age range: Adults, Adolescent, and Pediatric. These subcategories are purple ellipsed-shaped nodes. 
+Each CDE is connected to a single or multiple subcategories depending on their purpose/application. The orange circle nodes represent each Core CDE. 
+The size of the nodes depicts the count of the Core CDEs used.
+The size gradients contain four ranges from least to most: 0-19, 20-49, 50-79, and 80-100 counts. 
+As for the Research Programs, they are purple and triangle-shaped nodes. Respectively, each research program is connected to multiple Core CDEs.
+With this interactive knowledge graph, you can click on individual nodes to highlight specific ones or search a node using its ID. 
+If ID is unknown, you can search by node/edge and color/font/id/label/shape/size. 
+As a final note, the interactive knowledge graph is still being refined to improve efficient searches and logic.')
 
 
 net.repulsion(spring_strength = 0)
