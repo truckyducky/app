@@ -159,7 +159,22 @@ net.add_node('Node 49 - Research Programs' , label = 'Research Programs', color 
 
 # adding connections for third subcategory "research programs" to each research program
 net.add_edges([
-    (49,36),(49,37),(49,38),(49,39),(49,40),(49,41),(49,42),(49,43),(49,44),(49,45),(49,46),(49,47),(49,48),])
+    ('Node 49 - Research Programs','Node 36 - Biomarkers'),
+    ('Node 49 - Research Programs','Node 37 - ERN'),
+    ('Node 49 - Research Programs','Node 38 - Health Equity in Pain Management'),
+    ('Node 49 - Research Programs','Node 39 - A2CPS'),
+    ('Node 49 - Research Programs','Node 40 - BACPAC'),
+    ('Node 49 - Research Programs','Node 41 - IMPOWR'),
+    ('Node 49 - Research Programs','Node 42 - Interdisciplinary Teams to Elucidate the Mechanisms of Device-Based Pain Relief'),
+    ('Node 49 - Research Programs','Node 43 - MPS- Myofascial Pain'),
+    ('Node 49 - Research Programs','Node 44 - PRECISION Human Pain'),
+    ('Node 49 - Research Programs','Node 45 - PRISM'),
+    ('Node 49 - Research Programs','Node 46 - HOPE'),
+    ('Node 49 - Research Programs','Node 47 - EPPIC Net'),
+    ('Node 49 - Research Programs','Node 48 - RE JOIN')
+    
+]
+)
 
 
 
