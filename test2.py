@@ -413,7 +413,7 @@ net.add_edges([
 
 
 # # Set info message on initial site load
-st.text('Interactive Knowledge Graph illustrates the CDEs into three main categories: General Health, Demographics, and Research Programs. 
+st.markdown('Interactive Knowledge Graph illustrates the CDEs into three main categories: General Health, Demographics, and Research Programs. 
 These nodes are magenta and ellipsed-shaped. General Health divides up into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life. 
 Demographics are separated based on age range: Adults, Adolescent, and Pediatric. These subcategories are purple ellipsed-shaped nodes. 
 Each CDE is connected to a single or multiple subcategories depending on their purpose/application. The orange circle nodes represent each Core CDE. 
