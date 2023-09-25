@@ -12,7 +12,7 @@ net = Network(notebook = True, cdn_resources="remote",height="800px", width="100
 
 
 #add categorical/subcategorical nodes
-net = Network(notebook = True, cdn_resources="remote",height="900px", width="90%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c") #, heading = "Interactive Network of HEAL Core CDEs")
+net = Network(notebook = True, cdn_resources="remote",height="900px", width="90%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c", heading = "Interactive Network of HEAL Core CDEs")
 
 
 #add categorical/subcategorical nodes
@@ -38,11 +38,23 @@ net.add_nodes(['Node 1 - General Health',
              'Adults', 
              'Adolescent', 
              'Pediatric'],
+    title = ['General Health',
+             'Patient Health',
+             'Pain',
+             'Sleep',
+             'Substance Use',
+             'Mental Health',
+             'Quality of Life',
+             'Demographics', 
+             'Adults', 
+             'Adolescent', 
+             'Pediatric'],
     color = ['#982568', '#532565','#532565', '#532565', '#532565', '#532565', '#532565','#982568','#532565', '#532565','#532565'],
     size = [60, 30, 30 ,30, 30, 30, 60, 30, 30, 30, 30],
     shape = ['ellipse','ellipse','ellipse','ellipse','ellipse','ellipse','ellipse','ellipse','ellipse','ellipse','ellipse']
 
 )
+
 
 #adding nodes about common CDEs 12-35
 net.add_nodes(['Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
@@ -70,6 +82,30 @@ net.add_nodes(['Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Patte
              'Node 34 - Sleep Duration Question [SD - Adult or Peds]',
              'Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'],
     label = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
+             'Brief Pain Inventory - Interference [BPI-Interference]',
+             'Brief Pain Inventory - Severity [BPI-Severity]',
+             'Demographics - Adult [Demographics-A]',
+             'Demographics - Adult, Revised [Demographics-A Revised]',
+             'Demographics - Pediatric [Demographics-Peds]',
+             'Demographics - Pediatric, revised [Demographics-Peds Revised]',
+             'Generalized Anxiety Disorder - 2 Items [GAD-2]', 
+             'Generalized Anxiety Disorder - 7 Items [GAD-7]',
+             'NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]',
+             'Pain Catastrophizing Questionnaire - 13 Items [PCS-13]', 
+             'Pain Catastrophizing Scale - Parent [PCS-Parent]',
+             'Pain Catastrophizing Scale - Pediatric [PCS-Peds]',
+             'Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]',
+             'Pain, Enjoyment, General Activity [PEG]',
+             'Patient Global Impression of Change [PGIC]',
+             'Patient Health Questionnaire - 2 items [PHQ-2]',
+             'Patient Health Questionnaire - 8 Items [PHQ-8]',
+             'Patient Health Questionnaire - Full Assessment 9 Items [PHQ-9]',
+             'Pediatric Quality of Life Inventory [PedsQL]',
+             'PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]',
+             'PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]',
+             'Sleep Duration Question [SD - Adult or Peds]',
+             'Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'],
+     title = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
              'Brief Pain Inventory - Interference [BPI-Interference]',
              'Brief Pain Inventory - Severity [BPI-Severity]',
              'Demographics - Adult [Demographics-A]',
@@ -383,6 +419,427 @@ net.add_edges([
 ]
 )
 
+## add study names for Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]
+
+net.add_nodes(['Node 50 - SPRINT: Signature for Pain Recovery IN Teens', 
+               'Node 51 - SurgeryPal', 
+               'Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma',  
+               'Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain',
+               'Node 54 - Latinx Children and Surgery'],
+    label = ['SPRINT: Signature for Pain Recovery IN Teens',
+             'SurgeryPal',
+             'Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma',
+             'Integrative Training Program for Pediatric Sickle Cell Pain',
+             'Latinx Children and Surgery'],
+    title = ['SPRINT: Signature for Pain Recovery IN Teens',
+             'SurgeryPal',
+             'Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma',
+             'Integrative Training Program for Pediatric Sickle Cell Pain',
+             'Latinx Children and Surgery'],
+    shape = ['text','text','text','text','text']
+
+)
+
+## add edge connection for Node 12 to Study Names
+net.add_edges([
+    ('Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens'),
+    ('Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 51 - SurgeryPal'),
+    ('Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
+    ('Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
+    ('Node 12 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 54 - Latinx Children and Surgery'),
+    
+]
+)
+
+## add study names for Node 13 - Brief Pain Inventory - Interference [BPI-Interference]
+
+net.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery', 
+               'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain', 
+               'Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',  
+               'Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
+               'Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy',
+               'Node 60 - Validation of a novel cortical biomarker signature for pain', 
+               'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+               'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial',
+               'Node 63 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma', 
+               'Node 64 - Integrative Training Program for Pediatric Sickle Cell Pain',
+               'Node 65 - PAINED: Project Addressing INequities in the Emergency Department',
+               'Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder',
+               'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals',
+               'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals',
+               'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
+               'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues',
+               'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
+    label = ['Transition from Acute to Chronic Pain After Thoracic Surgery',
+             'Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain',
+             'Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',
+             'Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
+             'Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy',
+             'Validation of a novel cortical biomarker signature for pain',
+             'Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+             'Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial',
+             'Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma',
+             'Integrative Training Program for Pediatric Sickle Cell Pain',
+             'PAINED: Project Addressing INequities in the Emergency Department',
+             'Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder',
+             'RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals',
+             'RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals',
+             'HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
+             'INTERCEPT: Integrated Research Center for human Pain Tissues',
+             'Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
+    title = ['Transition from Acute to Chronic Pain After Thoracic Surgery',
+             'Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain',
+             'Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',
+             'Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
+             'Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy',
+             'Validation of a novel cortical biomarker signature for pain',
+             'Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+             'Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial',
+             'Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma',
+             'Integrative Training Program for Pediatric Sickle Cell Pain',
+             'PAINED: Project Addressing INequities in the Emergency Department',
+             'Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder',
+             'RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals',
+             'RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals',
+             'HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
+             'INTERCEPT: Integrated Research Center for human Pain Tissues',
+             'Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
+    shape = ['text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text']
+
+)
+
+## add edge connection for Node 13 to Study Names
+
+## running into trouble: node 13 will only connect to node 55, but not the rest
+
+
+# def add_edges_to_network(net, source_node, target_nodes):
+
+# # # Example usage:
+#     net = nx.Graph()  # Create a NetworkX graph
+
+#     source_node = 'Node 13 - Brief Pain Inventory - Interference [BPI-Interference]'
+#     target_nodes = ['Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery', 
+#                'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain', 
+#                'Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',  
+#                'Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
+#                'Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy',
+#                'Node 60 - Validation of a novel cortical biomarker signature for pain', 
+#                'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+#                'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial',
+#                'Node 63 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma' 
+#                'Node 64 - Integrative Training Program for Pediatric Sickle Cell Pain',
+#                'Node 65 - PAINED: Project Addressing INequities in the Emergency Department',
+#                'Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder',
+#                'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals',
+#                'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals',
+#                'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
+#                'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues',
+#                'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial',
+#                'Node 50 - SPRINT: Signature for Pain Recovery IN Teens', 
+#                'Node 51 - SurgeryPal',
+#                'Node 54 - Latinx Children and Surgery'
+# ]
+#     for target_node in target_nodes:
+#         net.add_edge(source_node, target_node)
+    
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain') 
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 60 - Validation of a novel cortical biomarker signature for pain') 
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 63 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 64 - Integrative Training Program for Pediatric Sickle Cell Pain')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 65 - PAINED: Project Addressing INequities in the Emergency Department')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 51 - SurgeryPal')
+net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 54 - Latinx Children and Surgery')
+
+net.repulsion(spring_strength = 0)
+
+# adding connections for 'Node 14 - Brief Pain Inventory - Severity [BPI-Severity]'
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain') 
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 60 - Validation of a novel cortical biomarker signature for pain') 
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 63 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 64 - Integrative Training Program for Pediatric Sickle Cell Pain')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 65 - PAINED: Project Addressing INequities in the Emergency Department')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 51 - SurgeryPal')
+net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]', 'Node 54 - Latinx Children and Surgery')
+
+#create study names to connect to node 15
+
+net.add_nodes(['Node 72 - COMEBACK',
+             'Node 73 - Focused Ultrasound Neuromodulation of Dorsal Root Ganglion for Noninvasive Mitigation of Low Back Pain',
+             'Node 74 - HEALing LB3P: Profiling Biomechanical, Biological and Behavioral Phenotypes',
+             'Node 75 - Imaging Epigenetic Dysregulation in Patients with Low Back Pain',
+             'Node 76 - Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Node 77 - Novel Imaging of Endplate Biomarkers in Chronic Low Back Pain',
+             'Node 78 - Proof of Concept Study to Treat Negative Affect in Chronic Low Back Pain',
+             'Node 79 - Randomized-controlled trial of virtual reality for chronic lower back pain to improve patient-reported outcomes and physical activity',
+             'Node 80 - Technology Research Site for Advanced, Faster Quantitative Imaging for BACPAC',
+             'Node 81 - The Spine Phenome Project: Enabling Technology for Personalized Medicine',
+             'Node 82 - UM MRC BACPAC',
+             'Node 83 - Wearable nanocomposite sensor system for diagnosing mechanical sources of low back pain and guiding rehabilitation',
+             'Node 84 - Discovery of Biomarker Signatures Prognostic for Neuropathic Pain after Acute Spinal Cord Injury',
+             'Node 85 - Discovery of the Biomarker Signature for Neuropathic Corneal Pain',
+             'Node 86 - Mentoring in Discovery and Validation of Clinical Chronic Pain Biomarkers',
+             'Node 87 - A Study to Evaluate the Safety and Efficacy of CNTX-6970 in Subjects With Knee Osteoarthritis Pain',
+             'Node 88 - EPPIC-Net: Novaremed Painful Diabetic Peripheral Neuropathy ISA (EN21-01)',
+             'Node 89 - EPPIC-Net: Platform Protocol to Assess Treatments for Painful Diabetic Peripheral Neuropathy',
+             'Node 90 - A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain',
+             'Node 91 - Integrated Treatment for Veterans with Co-Occurring Chronic Pain and Opioid Use Disorder',
+             'Node 92 - Optimizing the use of ketamine to reduce chronic postsurgical pain',
+             'Node 93 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+             'Node 94 - RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches',
+             'Node 95 - Wake Forest NCORP Research Base',
+             'Node 96 - Addressing the chronic pain epidemic among older adults in underserved community center; The GetActive+ study',
+             'Node 97 - Equity Using Interventions for Pain and Depression (EQUIPD)',
+             'Node 98 - Group-based Integrative Pain Management: A multi-level approach to address intersectional stigma and social isolation in diverse primary care safety net patients with chronic pain',
+             'Node 99 - Integrating Nonpharmacologic Strategies for Pain with Inclusion, Respect, and Equity (INSPIRE): Tailored digital tools, telehealth coaching, and primary care coordination',
+             'Node 100 - Partners for Pain & Wellbeing Equity: A Randomized Trial of Community Supported Complementary and Integrative Health Self Management for Back Pain',
+             'Node 101 - A Randomized Clinical Trial to Evaluate Non-Pharmacologic and Pharmacologic Approaches for Reducing Pain and Opioid Use Among Patients Treated with Maintenance Hemodialysis',
+             'Node 102 - Healing Opioid Misuse and Pain Through Engagement (HOPE) Trial',
+             'Node 103 - Intergrated Care for Chronic Pain and Opioid Use Disorder: The IMPOWR Research Center at Montefiore/Einstein (IMPOWR-ME)',
+             'Node 104 - Pain Care At Home to Amplify Function (Pain CHAMP)',
+             'Node 105 - Randomized Clinical Trial Intervention to Treat Chronic Pain Among Persons Maintained on Methadone for Opioid Use Disorder',
+             'Node 106 - Stepped Care for Patients to Optimize Whole Recovery (SC-POWR)',
+             'Node 107 - Tailored Retention and Engagement for Equitable Treatment of OUD and Pain (TREETOP)',
+             'Node 108 - From Nerve to Brain: Toward a Mechanistic Understanding of Spinal Cord Stimulation in Human Subjects',
+             'Node 109 - Understanding the Mechanistic, Neurophysiological, and Antinociceptive Effects of Transcutaneous Auricular Neurostimulation for Treatment of Chronic Pain',
+             'Node 110 - Development and identification of magnetic resonance, electrophysiological, and fiber-optic imaging biomarkers of myofascial pain',
+             'Node 111 - Development and Validation of a Noninvasive Multimodal Ultrasound-Based Imaging Biomarker for Myofascial Pain',
+             'Node 112 - MRI-based quantitative characterization of impaired myofascial interface properties in myofascial pain syndrome',
+             'Node 113 - Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain',
+             'Node 114 - Quantifying and Treating Myofascial Dysfunction in Post Stroke Shoulder Pain',
+             'Node 115 - Total-body PET for assessing myofascial pain',
+             'Node 116 - Harvard PRECISION Human Pain Center',
+             'Node 117 - Human Nociceptor and Spinal Cord Molecular Signature Center',
+             'Node 118 - Group-Based Mindfulness for Patients with Chronic Low Back Pain in the Primary Care',
+             'Node 119 - Hybrid Effectiveness-Implementation Trial of Guided Relaxation and Acupuncture for Chronic Sickle Cell Disease Pain',
+             'Node 120 - Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Node 121 - Non-pharmacological Options in postoperative Hospital-based And Rehabilitation pain Management (NOHARM) pragmatic clinical trial',
+             'Node 122 - Pragmatic Trial of Acupuncture for Chronic Low Back Pain in Older Adult',
+             'Node 123 - Comprehensive functional phenotyping of trigeminal neurons innervating temporomandibular joint (TMJ) tissues in male, female and aged mice, primates, and humans with and without TMJ disorders (TMJD)',
+             'Node 124 - Innervation of the knee and TMJ',
+             'Node 125 - Mapping the joint-nerve interactome of the knee',
+             'Node 126 - Neural architecture of the murine and human temporomandibular joint'],
+    label = ['COMEBACK',
+             'Focused Ultrasound Neuromodulation of Dorsal Root Ganglion for Noninvasive Mitigation of Low Back Pain',
+             'HEALing LB3P: Profiling Biomechanical, Biological and Behavioral Phenotypes',
+             'Imaging Epigenetic Dysregulation in Patients with Low Back Pain',
+             'Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Novel Imaging of Endplate Biomarkers in Chronic Low Back Pain',
+             'Proof of Concept Study to Treat Negative Affect in Chronic Low Back Pain',
+             'Randomized-controlled trial of virtual reality for chronic lower back pain to improve patient-reported outcomes and physical activity',
+             'Technology Research Site for Advanced, Faster Quantitative Imaging for BACPAC',
+             'The Spine Phenome Project: Enabling Technology for Personalized Medicine',
+             'UM MRC BACPAC',
+             'Wearable nanocomposite sensor system for diagnosing mechanical sources of low back pain and guiding rehabilitation',
+             'Discovery of Biomarker Signatures Prognostic for Neuropathic Pain after Acute Spinal Cord Injury',
+             'Discovery of the Biomarker Signature for Neuropathic Corneal Pain',
+             'Mentoring in Discovery and Validation of Clinical Chronic Pain Biomarkers',
+             'A Study to Evaluate the Safety and Efficacy of CNTX-6970 in Subjects With Knee Osteoarthritis Pain',
+             'EPPIC-Net: Novaremed Painful Diabetic Peripheral Neuropathy ISA (EN21-01)',
+             'EPPIC-Net: Platform Protocol to Assess Treatments for Painful Diabetic Peripheral Neuropathy',
+             'A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain',
+             'Integrated Treatment for Veterans with Co-Occurring Chronic Pain and Opioid Use Disorder',
+             'Optimizing the use of ketamine to reduce chronic postsurgical pain',
+             'Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+             'RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches',
+             'Wake Forest NCORP Research Base',
+             'Addressing the chronic pain epidemic among older adults in underserved community center; The GetActive+ study',
+             'Equity Using Interventions for Pain and Depression (EQUIPD)',
+             'Group-based Integrative Pain Management: A multi-level approach to address intersectional stigma and social isolation in diverse primary care safety net patients with chronic pain',
+             'Integrating Nonpharmacologic Strategies for Pain with Inclusion, Respect, and Equity (INSPIRE): Tailored digital tools, telehealth coaching, and primary care coordination',
+             'Partners for Pain & Wellbeing Equity: A Randomized Trial of Community Supported Complementary and Integrative Health Self Management for Back Pain',
+             'A Randomized Clinical Trial to Evaluate Non-Pharmacologic and Pharmacologic Approaches for Reducing Pain and Opioid Use Among Patients Treated with Maintenance Hemodialysis',
+             'Healing Opioid Misuse and Pain Through Engagement (HOPE) Trial',
+             'Intergrated Care for Chronic Pain and Opioid Use Disorder: The IMPOWR Research Center at Montefiore/Einstein (IMPOWR-ME)',
+             'Pain Care At Home to Amplify Function (Pain CHAMP)',
+             'Randomized Clinical Trial Intervention to Treat Chronic Pain Among Persons Maintained on Methadone for Opioid Use Disorder',
+             'Stepped Care for Patients to Optimize Whole Recovery (SC-POWR)',
+             'Tailored Retention and Engagement for Equitable Treatment of OUD and Pain (TREETOP)',
+             'From Nerve to Brain: Toward a Mechanistic Understanding of Spinal Cord Stimulation in Human Subjects',
+             'Understanding the Mechanistic, Neurophysiological, and Antinociceptive Effects of Transcutaneous Auricular Neurostimulation for Treatment of Chronic Pain',
+             'Development and identification of magnetic resonance, electrophysiological, and fiber-optic imaging biomarkers of myofascial pain',
+             'Development and Validation of a Noninvasive Multimodal Ultrasound-Based Imaging Biomarker for Myofascial Pain',
+             'MRI-based quantitative characterization of impaired myofascial interface properties in myofascial pain syndrome',
+             'Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain',
+             'Quantifying and Treating Myofascial Dysfunction in Post Stroke Shoulder Pain',
+             'Total-body PET for assessing myofascial pain',
+             'Harvard PRECISION Human Pain Center',
+             'Human Nociceptor and Spinal Cord Molecular Signature Center',
+             'Group-Based Mindfulness for Patients with Chronic Low Back Pain in the Primary Care',
+             'Hybrid Effectiveness-Implementation Trial of Guided Relaxation and Acupuncture for Chronic Sickle Cell Disease Pain',
+             'Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Non-pharmacological Options in postoperative Hospital-based And Rehabilitation pain Management (NOHARM) pragmatic clinical trial',
+             'Pragmatic Trial of Acupuncture for Chronic Low Back Pain in Older Adult',
+             'Comprehensive functional phenotyping of trigeminal neurons innervating temporomandibular joint (TMJ) tissues in male, female and aged mice, primates, and humans with and without TMJ disorders (TMJD)',
+             'Innervation of the knee and TMJ',
+             'Mapping the joint-nerve interactome of the knee',
+             'Neural architecture of the murine and human temporomandibular joint'],
+    title = ['COMEBACK',
+             'Focused Ultrasound Neuromodulation of Dorsal Root Ganglion for Noninvasive Mitigation of Low Back Pain',
+             'HEALing LB3P: Profiling Biomechanical, Biological and Behavioral Phenotypes',
+             'Imaging Epigenetic Dysregulation in Patients with Low Back Pain',
+             'Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Novel Imaging of Endplate Biomarkers in Chronic Low Back Pain',
+             'Proof of Concept Study to Treat Negative Affect in Chronic Low Back Pain',
+             'Randomized-controlled trial of virtual reality for chronic lower back pain to improve patient-reported outcomes and physical activity',
+             'Technology Research Site for Advanced, Faster Quantitative Imaging for BACPAC',
+             'The Spine Phenome Project: Enabling Technology for Personalized Medicine',
+             'UM MRC BACPAC',
+             'Wearable nanocomposite sensor system for diagnosing mechanical sources of low back pain and guiding rehabilitation',
+             'Discovery of Biomarker Signatures Prognostic for Neuropathic Pain after Acute Spinal Cord Injury',
+             'Discovery of the Biomarker Signature for Neuropathic Corneal Pain',
+             'Mentoring in Discovery and Validation of Clinical Chronic Pain Biomarkers',
+             'A Study to Evaluate the Safety and Efficacy of CNTX-6970 in Subjects With Knee Osteoarthritis Pain',
+             'EPPIC-Net: Novaremed Painful Diabetic Peripheral Neuropathy ISA (EN21-01)',
+             'EPPIC-Net: Platform Protocol to Assess Treatments for Painful Diabetic Peripheral Neuropathy',
+             'A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain',
+             'Integrated Treatment for Veterans with Co-Occurring Chronic Pain and Opioid Use Disorder',
+             'Optimizing the use of ketamine to reduce chronic postsurgical pain',
+             'Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
+             'RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches',
+             'Wake Forest NCORP Research Base',
+             'Addressing the chronic pain epidemic among older adults in underserved community center; The GetActive+ study',
+             'Equity Using Interventions for Pain and Depression (EQUIPD)',
+             'Group-based Integrative Pain Management: A multi-level approach to address intersectional stigma and social isolation in diverse primary care safety net patients with chronic pain',
+             'Integrating Nonpharmacologic Strategies for Pain with Inclusion, Respect, and Equity (INSPIRE): Tailored digital tools, telehealth coaching, and primary care coordination',
+             'Partners for Pain & Wellbeing Equity: A Randomized Trial of Community Supported Complementary and Integrative Health Self Management for Back Pain',
+             'A Randomized Clinical Trial to Evaluate Non-Pharmacologic and Pharmacologic Approaches for Reducing Pain and Opioid Use Among Patients Treated with Maintenance Hemodialysis',
+             'Healing Opioid Misuse and Pain Through Engagement (HOPE) Trial',
+             'Intergrated Care for Chronic Pain and Opioid Use Disorder: The IMPOWR Research Center at Montefiore/Einstein (IMPOWR-ME)',
+             'Pain Care At Home to Amplify Function (Pain CHAMP)',
+             'Randomized Clinical Trial Intervention to Treat Chronic Pain Among Persons Maintained on Methadone for Opioid Use Disorder',
+             'Stepped Care for Patients to Optimize Whole Recovery (SC-POWR)',
+             'Tailored Retention and Engagement for Equitable Treatment of OUD and Pain (TREETOP)',
+             'From Nerve to Brain: Toward a Mechanistic Understanding of Spinal Cord Stimulation in Human Subjects',
+             'Understanding the Mechanistic, Neurophysiological, and Antinociceptive Effects of Transcutaneous Auricular Neurostimulation for Treatment of Chronic Pain',
+             'Development and identification of magnetic resonance, electrophysiological, and fiber-optic imaging biomarkers of myofascial pain',
+             'Development and Validation of a Noninvasive Multimodal Ultrasound-Based Imaging Biomarker for Myofascial Pain',
+             'MRI-based quantitative characterization of impaired myofascial interface properties in myofascial pain syndrome',
+             'Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain',
+             'Quantifying and Treating Myofascial Dysfunction in Post Stroke Shoulder Pain',
+             'Total-body PET for assessing myofascial pain',
+             'Harvard PRECISION Human Pain Center',
+             'Human Nociceptor and Spinal Cord Molecular Signature Center',
+             'Group-Based Mindfulness for Patients with Chronic Low Back Pain in the Primary Care',
+             'Hybrid Effectiveness-Implementation Trial of Guided Relaxation and Acupuncture for Chronic Sickle Cell Disease Pain',
+             'Nonpharmacologic Pain Management for Lumbar Surgery',
+             'Non-pharmacological Options in postoperative Hospital-based And Rehabilitation pain Management (NOHARM) pragmatic clinical trial',
+             'Pragmatic Trial of Acupuncture for Chronic Low Back Pain in Older Adult',
+             'Comprehensive functional phenotyping of trigeminal neurons innervating temporomandibular joint (TMJ) tissues in male, female and aged mice, primates, and humans with and without TMJ disorders (TMJD)',
+             'Innervation of the knee and TMJ',
+             'Mapping the joint-nerve interactome of the knee',
+             'Neural architecture of the murine and human temporomandibular joint'],
+    shape = ['text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text']
+
+)
+
+## add edge connection for Node 15 to Study Names
+
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 72 - COMEBACK')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 73 - Focused Ultrasound Neuromodulation of Dorsal Root Ganglion for Noninvasive Mitigation of Low Back Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 74 - HEALing LB3P: Profiling Biomechanical, Biological and Behavioral Phenotypes')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 75 - Imaging Epigenetic Dysregulation in Patients with Low Back Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 76 - Nonpharmacologic Pain Management for Lumbar Surgery')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 77 - Novel Imaging of Endplate Biomarkers in Chronic Low Back Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 78 - Proof of Concept Study to Treat Negative Affect in Chronic Low Back Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 79 - Randomized-controlled trial of virtual reality for chronic lower back pain to improve patient-reported outcomes and physical activity')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 80 - Technology Research Site for Advanced, Faster Quantitative Imaging for BACPAC')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 81 - The Spine Phenome Project: Enabling Technology for Personalized Medicine')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 82 - UM MRC BACPAC')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 83 - Wearable nanocomposite sensor system for diagnosing mechanical sources of low back pain and guiding rehabilitation')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 84 - Discovery of Biomarker Signatures Prognostic for Neuropathic Pain after Acute Spinal Cord Injury')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 85 - Discovery of the Biomarker Signature for Neuropathic Corneal Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 86 - Mentoring in Discovery and Validation of Clinical Chronic Pain Biomarkers')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 87 - A Study to Evaluate the Safety and Efficacy of CNTX-6970 in Subjects With Knee Osteoarthritis Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 88 - EPPIC-Net: Novaremed Painful Diabetic Peripheral Neuropathy ISA (EN21-01)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 89 - EPPIC-Net: Platform Protocol to Assess Treatments for Painful Diabetic Peripheral Neuropathy')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 90 - A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 91 - Integrated Treatment for Veterans with Co-Occurring Chronic Pain and Opioid Use Disorder')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 92 - Optimizing the use of ketamine to reduce chronic postsurgical pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 93 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 94 - RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 95 - Wake Forest NCORP Research Base')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 96 - Addressing the chronic pain epidemic among older adults in underserved community center; The GetActive+ study')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 97 - Equity Using Interventions for Pain and Depression (EQUIPD)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 98 - Group-based Integrative Pain Management: A multi-level approach to address intersectional stigma and social isolation in diverse primary care safety net patients with chronic pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 99 - Integrating Nonpharmacologic Strategies for Pain with Inclusion, Respect, and Equity (INSPIRE): Tailored digital tools, telehealth coaching, and primary care coordination')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 100 - Partners for Pain & Wellbeing Equity: A Randomized Trial of Community Supported Complementary and Integrative Health Self Management for Back Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 101 - A Randomized Clinical Trial to Evaluate Non-Pharmacologic and Pharmacologic Approaches for Reducing Pain and Opioid Use Among Patients Treated with Maintenance Hemodialysis')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 102 - Healing Opioid Misuse and Pain Through Engagement (HOPE) Trial')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 103 - Intergrated Care for Chronic Pain and Opioid Use Disorder: The IMPOWR Research Center at Montefiore/Einstein (IMPOWR-ME)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 104 - Pain Care At Home to Amplify Function (Pain CHAMP)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 105 - Randomized Clinical Trial Intervention to Treat Chronic Pain Among Persons Maintained on Methadone for Opioid Use Disorder')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 106 - Stepped Care for Patients to Optimize Whole Recovery (SC-POWR)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 107 - Tailored Retention and Engagement for Equitable Treatment of OUD and Pain (TREETOP)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 108 - From Nerve to Brain: Toward a Mechanistic Understanding of Spinal Cord Stimulation in Human Subjects')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 109 - Understanding the Mechanistic, Neurophysiological, and Antinociceptive Effects of Transcutaneous Auricular Neurostimulation for Treatment of Chronic Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 110 - Development and identification of magnetic resonance, electrophysiological, and fiber-optic imaging biomarkers of myofascial pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 111 - Development and Validation of a Noninvasive Multimodal Ultrasound-Based Imaging Biomarker for Myofascial Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 112 - MRI-based quantitative characterization of impaired myofascial interface properties in myofascial pain syndrome')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 113 - Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 114 - Quantifying and Treating Myofascial Dysfunction in Post Stroke Shoulder Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 115 - Total-body PET for assessing myofascial pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 116 - Harvard PRECISION Human Pain Center')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 117 - Human Nociceptor and Spinal Cord Molecular Signature Center')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 118 - Group-Based Mindfulness for Patients with Chronic Low Back Pain in the Primary Care')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 119 - Hybrid Effectiveness-Implementation Trial of Guided Relaxation and Acupuncture for Chronic Sickle Cell Disease Pain')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 120 - Nonpharmacologic Pain Management for Lumbar Surgery')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 121 - Non-pharmacological Options in postoperative Hospital-based And Rehabilitation pain Management (NOHARM) pragmatic clinical trial')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 122 - Pragmatic Trial of Acupuncture for Chronic Low Back Pain in Older Adult')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 123 - Comprehensive functional phenotyping of trigeminal neurons innervating temporomandibular joint (TMJ) tissues in male, female and aged mice, primates, and humans with and without TMJ disorders (TMJD)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 124 - Innervation of the knee and TMJ')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 125 - Mapping the joint-nerve interactome of the knee')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain') 
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 60 - Validation of a novel cortical biomarker signature for pain') 
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]','Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues')
+net.add_edge('Node 15 - Demographics - Adult [Demographics-A]', 'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial')
+        
+net.add_edge('Node 16 - Demographics - Adult, Revised [Demographics-A Revised]', 'Node 65 - PAINED: Project Addressing INequities in the Emergency Department')
+net.add_edge('Node 17 - Demographics - Pediatric [Demographics-Peds]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens') 
+net.add_edge('Node 17 - Demographics - Pediatric [Demographics-Peds]','Node 51 - SurgeryPal')
+net.add_edge('Node 17 - Demographics - Pediatric [Demographics-Peds]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')  
+net.add_edge('Node 17 - Demographics - Pediatric [Demographics-Peds]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
+net.add_edge('Node 17 - Demographics - Pediatric [Demographics-Peds]','Node 54 - Latinx Children and Surgery')
+net.add_edge('Node 18 - Demographics - Pediatric, revised [Demographics-Peds Revised]','Node 65 - PAINED: Project Addressing INequities in the Emergency Department')
+
+
 # cde_list = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
 #              'Brief Pain Inventory - Interference [BPI-Interference]',
 #              'Brief Pain Inventory - Severity [BPI-Severity]',
@@ -413,16 +870,21 @@ net.add_edges([
 
 
 # # Set info message on initial site load
-multi = '''Interactive Knowledge Graph illustrates the CDEs into three main categories: General Health, Demographics, and Research Programs. 
-These nodes are magenta and ellipsed-shaped. General Health divides up into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life. 
-Demographics are separated based on age range: Adults, Adolescent, and Pediatric. These subcategories are purple ellipsed-shaped nodes. 
-Each CDE is connected to a single or multiple subcategories depending on their purpose/application. The orange circle nodes represent each Core CDE. 
-The size of the nodes depicts the count of the Core CDEs used.
-The size gradients contain four ranges from least to most: 0-19, 20-49, 50-79, and 80-100 counts. 
-As for the Research Programs, they are purple and triangle-shaped nodes. Respectively, each research program is connected to multiple Core CDEs.
-With this interactive knowledge graph, you can click on individual nodes to highlight specific ones or search a node using its ID. 
-If ID is unknown, you can search by node/edge and color/font/id/label/shape/size. 
-As a final note, the interactive knowledge graph is still being refined to improve efficient searches and logic. '''
+multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of  the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
+Understanding nodes: 
+  - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
+  - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
+
+Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
+This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
+  - Selecting a primary node will unfold a new set of subcategory nodes.
+These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
+  - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
+  - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
+  - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
+The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
+ '''
 st.markdown(multi)
 
 
