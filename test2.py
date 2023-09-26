@@ -870,7 +870,7 @@ net.add_edge('Node 18 - Demographics - Pediatric, revised [Demographics-Peds Rev
 
 
 # # Set info message on initial site load
-multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of  the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
+multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
 Understanding nodes: 
   - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
   - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
@@ -882,6 +882,7 @@ These subcategories are central connecting points, serving as central links betw
   - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
   - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
   - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+
 This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
 The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
  '''
