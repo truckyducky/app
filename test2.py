@@ -10,21 +10,23 @@ from pyvis.network import Network
 st.title("Interactive Network of HEAL Core CDEs")  
 
 # Set info message on initial site load
-multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
+multi = '''This dynamic tool is designed to help researchers intuitively comprehend HEAL CDE use interconnectedness and pertinence, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE.  
 Understanding nodes: 
-  - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
-  - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
-
-Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
+  - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that visually represent specific information.  
+  - Each node is like a data container - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
+Understanding edges: 
+  - An “edge” refers to the line connection to the various shapes within the graph (circles, triangles, etc.) that visually represent specific information.  
+  - Each edge is like a pathway linking the nodes to each other. The edge represents a relationship between different pieces of information. Note that there can be multiple relationships between various information leading to multiple pathway connections. 
+Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of use - i.e. bigger circle indicates greater reported intended use. 
 This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
-  - Selecting a primary node will unfold a new set of subcategory nodes.
-These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
-  - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
-  - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
-  - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+  - Selecting a primary node will unfold a new set of subcategory nodes, each depicted as deep purple nodes. These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
+      - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as purple oval nodes
+      - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as purple oval nodes
+      - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, easing identification of patterns, relationships, and focal points of interest. 
+  - The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
+      - Continual efforts are underway to introduce specific study names as a new subcategory node, allowing users to discern CDEapplications at the individual study level, expanding beyond the existing capability to visualize CDE use solely at the research program level.
 
-This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
-The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
  '''
 st.markdown(multi)
 
