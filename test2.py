@@ -943,7 +943,7 @@ net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 
 #'Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]'
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 51 - SurgeryPal')
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 54 - Latinx Children and Surgery')
 
@@ -1243,7 +1243,7 @@ net.add_edge('Node 30 - Patient Health Questionnaire - Full Assessment 9 Items [
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 51 - SurgeryPal')
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
-net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 54 - Latinx Children and Surgery')
 
 
