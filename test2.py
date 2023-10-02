@@ -898,10 +898,10 @@ net.add_edge('Node 20 - Generalized Anxiety Disorder - 7 Items [GAD-7]','Node 12
 
 
 #'Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]'
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 51 - SurgeryPal'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 51 - SurgeryPal')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Node 54 - Latinx Children and Surgery')
 
 
@@ -934,17 +934,17 @@ net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]',
 
 ##'Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]'
 
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 51 - SurgeryPal'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 51 - SurgeryPal')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Node 54 - Latinx Children and Surgery')
 
 #'Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]'
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 51 - SurgeryPal'),
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 51 - SurgeryPal')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node 54 - Latinx Children and Surgery')
 
 
@@ -1240,9 +1240,9 @@ net.add_edge('Node 30 - Patient Health Questionnaire - Full Assessment 9 Items [
 
 #'Node 31 - Pediatric Quality of Life Inventory [PedsQL]',
 
-net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 51 - SurgeryPal'),
-net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
+net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 50 - SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 51 - SurgeryPal')
+net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 52 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 53 - Integrative Training Program for Pediatric Sickle Cell Pain'),
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 54 - Latinx Children and Surgery')
 
