@@ -8,6 +8,26 @@ from pyvis.network import Network
 
 #setup network
 st.title("Interactive Network of HEAL Core CDEs")  
+
+# Set info message on initial site load
+multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
+Understanding nodes: 
+  - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
+  - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
+
+Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
+This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
+  - Selecting a primary node will unfold a new set of subcategory nodes.
+These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
+  - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
+  - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
+  - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+
+This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
+The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
+ '''
+st.markdown(multi)
+
 net = Network(notebook = True, cdn_resources="remote",height="900px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
 
 #add categorical/subcategorical nodes
@@ -206,8 +226,6 @@ net.add_edges([
     
 ]
 )
-
-
 
 #adding connections for the research programs to CDEs
 net.add_edges([
@@ -526,7 +544,6 @@ net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]',
 net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 51 - SurgeryPal')
 net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 54 - Latinx Children and Surgery')
 
-net.repulsion(spring_strength = 0)
 
 # adding connections for 'Node 14 - Brief Pain Inventory - Severity [BPI-Severity]'
 net.add_edge('Node 14 - Brief Pain Inventory - Severity [BPI-Severity]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
@@ -896,19 +913,16 @@ net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]',
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 86 - Mentoring in Discovery and Validation of Clinical Chronic Pain Biomarkers')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 60 - Validation of a novel cortical biomarker signature for pain') 
-
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 90 - A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 91 - Integrated Treatment for Veterans with Co-Occurring Chronic Pain and Opioid Use Disorder')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 92 - Optimizing the use of ketamine to reduce chronic postsurgical pain')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 93 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 95 - Wake Forest NCORP Research Base')
-
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 96 - Addressing the chronic pain epidemic among older adults in underserved community center; The GetActive+ study')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 97 - Equity Using Interventions for Pain and Depression (EQUIPD)')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 99 - Integrating Nonpharmacologic Strategies for Pain with Inclusion, Respect, and Equity (INSPIRE): Tailored digital tools, telehealth coaching, and primary care coordination')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 105 - Randomized Clinical Trial Intervention to Treat Chronic Pain Among Persons Maintained on Methadone for Opioid Use Disorder')
-
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 108 - From Nerve to Brain: Toward a Mechanistic Understanding of Spinal Cord Stimulation in Human Subjects')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management')
 net.add_edge('Node 22 - Pain Catastrophizing Questionnaire - 13 Items [PCS-13]','Node 112 - MRI-based quantitative characterization of impaired myofascial interface properties in myofascial pain syndrome')
@@ -936,8 +950,6 @@ net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Node
 
 #'Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]',
 
-## add edge connection for Node 15 to Study Names
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]', 'Node 72 - COMEBACK')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain') 
@@ -957,24 +969,17 @@ net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','No
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 89 - EPPIC-Net: Platform Protocol to Assess Treatments for Painful Diabetic Peripheral Neuropathy')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 94 - RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial')
-
-
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 98 - Group-based Integrative Pain Management: A multi-level approach to address intersectional stigma and social isolation in diverse primary care safety net patients with chronic pain')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 100 - Partners for Pain & Wellbeing Equity: A Randomized Trial of Community Supported Complementary and Integrative Health Self Management for Back Pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 101 - A Randomized Clinical Trial to Evaluate Non-Pharmacologic and Pharmacologic Approaches for Reducing Pain and Opioid Use Among Patients Treated with Maintenance Hemodialysis')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 102 - Healing Opioid Misuse and Pain Through Engagement (HOPE) Trial')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 103 - Intergrated Care for Chronic Pain and Opioid Use Disorder: The IMPOWR Research Center at Montefiore/Einstein (IMPOWR-ME)')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 104 - Pain Care At Home to Amplify Function (Pain CHAMP)')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 106 - Stepped Care for Patients to Optimize Whole Recovery (SC-POWR)')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 107 - Tailored Retention and Engagement for Equitable Treatment of OUD and Pain (TREETOP)')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 109 - Understanding the Mechanistic, Neurophysiological, and Antinociceptive Effects of Transcutaneous Auricular Neurostimulation for Treatment of Chronic Pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 110 - Development and identification of magnetic resonance, electrophysiological, and fiber-optic imaging biomarkers of myofascial pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]', 'Node 111 - Development and Validation of a Noninvasive Multimodal Ultrasound-Based Imaging Biomarker for Myofascial Pain')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 113 - Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 114 - Quantifying and Treating Myofascial Dysfunction in Post Stroke Shoulder Pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 115 - Total-body PET for assessing myofascial pain')
@@ -984,13 +989,10 @@ net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','No
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 119 - Hybrid Effectiveness-Implementation Trial of Guided Relaxation and Acupuncture for Chronic Sickle Cell Disease Pain')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 120 - Nonpharmacologic Pain Management for Lumbar Surgery')
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 121 - Non-pharmacological Options in postoperative Hospital-based And Rehabilitation pain Management (NOHARM) pragmatic clinical trial')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 123 - Comprehensive functional phenotyping of trigeminal neurons innervating temporomandibular joint (TMJ) tissues in male, female and aged mice, primates, and humans with and without TMJ disorders (TMJD)')
-
 net.add_edge('Node 25 - Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
 #add edge connection to 'Node 26 - Pain, Enjoyment, General Activity [PEG]',
-
 
 net.add_edge('Node 26 - Pain, Enjoyment, General Activity [PEG]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 26 - Pain, Enjoyment, General Activity [PEG]', 'Node 72 - COMEBACK')
@@ -1132,7 +1134,7 @@ net.add_edge('Node 27 - Patient Global Impression of Change [PGIC]','Node 124 - 
 net.add_edge('Node 27 - Patient Global Impression of Change [PGIC]','Node 125 - Mapping the joint-nerve interactome of the knee')
 net.add_edge('Node 27 - Patient Global Impression of Change [PGIC]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
-#              'Node 28 - Patient Health Questionnaire - 2 items [PHQ-2]',
+#'Node 28 - Patient Health Questionnaire - 2 items [PHQ-2]',
 
 net.add_edge('Node 28 - Patient Health Questionnaire - 2 items [PHQ-2]', 'Node 72 - COMEBACK')
 
@@ -1196,8 +1198,6 @@ net.add_edge('Node 28 - Patient Health Questionnaire - 2 items [PHQ-2]','Node 12
 #'Node 29 - Patient Health Questionnaire - 8 Items [PHQ-8]',
 
 net.add_edge('Node 29 - Patient Health Questionnaire - 8 Items [PHQ-8]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
-
-
 net.add_edge('Node 29 - Patient Health Questionnaire - 8 Items [PHQ-8]','Node 90 - A sequenced-strategy for improving outcomes in patients with knee osteoarthritis pain')
 net.add_edge('Node 29 - Patient Health Questionnaire - 8 Items [PHQ-8]','Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)')
 net.add_edge('Node 29 - Patient Health Questionnaire - 8 Items [PHQ-8]','Node 94 - RESOLVE- Tailored Non-Pharmacotherapy Services for Chronic Pain: Testing Scalable and Pragmatic Approaches')
@@ -1541,26 +1541,6 @@ net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Sub
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 124 - Innervation of the knee and TMJ')
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 125 - Mapping the joint-nerve interactome of the knee')
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
-
-
-# # Set info message on initial site load
-# multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
-# Understanding nodes: 
-#   - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
-#   - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
-
-# Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
-# This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
-#   - Selecting a primary node will unfold a new set of subcategory nodes.
-# These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
-#   - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
-#   - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
-#   - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
-
-# This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
-# The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
-#  '''
-# st.markdown(multi)
 
 
 net.repulsion(spring_strength = 0)
