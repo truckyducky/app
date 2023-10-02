@@ -28,7 +28,7 @@ The graph is continually being refined for optimized logical coherence and searc
  '''
 st.markdown(multi)
 
-net = Network(notebook = True, cdn_resources="remote",height="900px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
+net = Network(notebook = True, cdn_resources="remote",height="800px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
 
 #add categorical/subcategorical nodes
 net.add_nodes(['Node 1 - General Health', 
@@ -1559,4 +1559,4 @@ except:
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
 # Load HTML file in HTML component for display on Streamlit page
-components.html(HtmlFile.read(), height=10000, width = 1000)
+components.html(HtmlFile.read(), height=900, width = 900)
