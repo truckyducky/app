@@ -1584,6 +1584,7 @@ net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Sub
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 125 - Mapping the joint-nerve interactome of the knee')
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
+net.show("edges.html")
 
 # # Set info message on initial site load
 multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
