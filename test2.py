@@ -509,39 +509,6 @@ net.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thoracic S
 )
 
 ## add edge connection for Node 13 to Study Names
-
-## running into trouble: node 13 will only connect to node 55, but not the rest
-
-
-# def add_edges_to_network(net, source_node, target_nodes):
-
-# # # Example usage:
-#     net = nx.Graph()  # Create a NetworkX graph
-
-#     source_node = 'Node 13 - Brief Pain Inventory - Interference [BPI-Interference]'
-#     target_nodes = ['Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery', 
-#                'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain', 
-#                'Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',  
-#                'Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
-#                'Node 59 - Multi-Omic Biomarkers for Neuropathic Pain Secondary to Chemotherapy',
-#                'Node 60 - Validation of a novel cortical biomarker signature for pain', 
-#                'Node 61 - Pain Response Evaluation of a Combined Intervention to Cope Effectively (PRECICE)',
-#                'Node 62 - Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT" (ASCENT) Clinical Trial',
-#                'Node 63 - Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma' 
-#                'Node 64 - Integrative Training Program for Pediatric Sickle Cell Pain',
-#                'Node 65 - PAINED: Project Addressing INequities in the Emergency Department',
-#                'Node 66 - Implementation and Effectiveness of Mindfulness Oriented Recovery Enhancement as an Adjunct to Methadone Treatment for Opioid Use Disorder',
-#                'Node 67 - RM1 Project 1: Evaluating the specific role of endogenous opioids as the mechanism underlying tAN-based analgesia in healthy individuals',
-#                'Node 68 - RM1 Project 2: Determining the independent and synergistic effects of transcutaneous auricular neurostimulation (tAN) on direct brain activation in healthy individuals',
-#                'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
-#                'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues',
-#                'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial',
-#                'Node 50 - SPRINT: Signature for Pain Recovery IN Teens', 
-#                'Node 51 - SurgeryPal',
-#                'Node 54 - Latinx Children and Surgery'
-# ]
-#     for target_node in target_nodes:
-#         net.add_edge(source_node, target_node)
     
 net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 13 - Brief Pain Inventory - Interference [BPI-Interference]', 'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain') 
@@ -1285,9 +1252,7 @@ net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 53 -
 net.add_edge('Node 31 - Pediatric Quality of Life Inventory [PedsQL]','Node 54 - Latinx Children and Surgery')
 
 
-#              'Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]',
-
-
+# 'Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]',
 
 net.add_edge('Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]', 'Node 72 - COMEBACK')
@@ -1360,7 +1325,7 @@ net.add_edge('Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b
 net.add_edge('Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]','Node 125 - Mapping the joint-nerve interactome of the knee')
 net.add_edge('Node 32 - PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
-#              'Node 33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]',
+#'Node 33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]',
 
 net.add_edge('Node 33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 33 - PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]', 'Node 72 - COMEBACK')
@@ -1508,9 +1473,7 @@ net.add_edge('Node 34 - Sleep Duration Question [SD - Adult or Peds]','Node 125 
 net.add_edge('Node 34 - Sleep Duration Question [SD - Adult or Peds]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
 
-#              'Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'
-
-
+#'Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]'
 
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery')
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 72 - COMEBACK')
@@ -1584,7 +1547,6 @@ net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Sub
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 125 - Mapping the joint-nerve interactome of the knee')
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
-net.show("edges.html")
 
 # # Set info message on initial site load
 multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
