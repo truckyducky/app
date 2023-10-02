@@ -1544,23 +1544,23 @@ net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Sub
 
 
 # # Set info message on initial site load
-multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
-Understanding nodes: 
-  - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
-  - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
+# multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
+# Understanding nodes: 
+#   - A “node” refers to the various shapes within the graph (circles, triangles, etc.) that serve as a visual representation of specific information.  
+#   - Each node is like a container of data - akin to a folder on your computer that stores files. These nodes, or “containers”, are interconnected, illustrating the relationships between different pieces of information.
 
-Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
-This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
-  - Selecting a primary node will unfold a new set of subcategory nodes.
-These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
-  - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
-  - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
-  - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+# Each core CDE is depicted as orange, circular nodes, varying in sizes. The size of the CDE name corresponds to the frequency of usage - i.e. bigger circle indicates greater reported intended use. 
+# This knowledge graph categorizes the CDEs into three primary sectors - General Health, Demographics, and Research Programs, each depicted as magenta, ellipse-shaped nodes. 
+#   - Selecting a primary node will unfold a new set of subcategory nodes.
+# These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
+#   - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as deep purple oval nodes
+#   - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as deep purple oval nodes
+#   - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
 
-This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
-The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
- '''
-st.markdown(multi)
+# This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, allowing for the easy identification of patterns, relationships, and focal points of interest. 
+# The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
+#  '''
+# st.markdown(multi)
 
 
 net.repulsion(spring_strength = 0)
@@ -1579,4 +1579,4 @@ except:
     HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
 # Load HTML file in HTML component for display on Streamlit page
-components.html(HtmlFile.read(), height=10000, width = 10000)
+components.html(HtmlFile.read(), height=10000, width = 1000)
