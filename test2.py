@@ -1585,37 +1585,6 @@ net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Sub
 net.add_edge('Node 35 - Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]','Node 126 - Neural architecture of the murine and human temporomandibular joint')
 
 
-net.show("edges.html")
-
-# cde_list = ['Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', 
-#              'Brief Pain Inventory - Interference [BPI-Interference]',
-#              'Brief Pain Inventory - Severity [BPI-Severity]',
-#              'Demographics - Adult [Demographics-A]',
-#              'Demographics - Adult, Revised [Demographics-A Revised]',
-#              'Demographics - Pediatric [Demographics-Peds]',
-#              'Demographics - Pediatric, revised [Demographics-Peds Revised]',
-#              'Generalized Anxiety Disorder - 2 Items [GAD-2]', 
-#              'Generalized Anxiety Disorder - 7 Items [GAD-7]',
-#              'NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]',
-#              'Pain Catastrophizing Questionnaire - 13 Items [PCS-13]', 
-#              'Pain Catastrophizing Scale - Parent [PCS-Parent]',
-#              'Pain Catastrophizing Scale - Pediatric [PCS-Peds]',
-#              'Pain Catastrophizing Scale - Short Form 6 [PCS-SF6]',
-#              'Pain, Enjoyment, General Activity [PEG]',
-#              'Patient Global Impression of Change [PGIC]',
-#              'Patient Health Questionnaire - 2 items [PHQ-2]',
-#              'Patient Health Questionnaire - 8 Items [PHQ-8]',
-#              'Patient Health Questionnaire - Full Assessment 9 Items [PHQ-9]',
-#              'Pediatric Quality of Life Inventory [PedsQL]',
-#              'PROMIS Physical Function - Short Form 6b [PROMIS PF-SF6b]',
-#              'PROMIS Sleep Disturbance 6a + Sleep Duration [PROMIS SD-6a + Sleep Duration]',
-#              'Sleep Duration Question [SD - Adult or Peds]',
-#              'Tobacco, Alcohol, Prescription Medication, and Other Substance Use Tool [TAPS-1]']
-
-# # Implement multiselect dropdown menu for option selection (returns a list)
-# selected_cdes = st.multiselect('Select HEAL Common Core CDEs to visualize', cde_list)
-
-
 # # Set info message on initial site load
 multi = '''This dynamic tool is designed to help researchers intuitively comprehend the interconnectedness and pertinence of the uses of HEAL CDEs, allowing users to explore and understand the intricate relationships and patterns within each HEAL CDE use.  
 Understanding nodes: 
