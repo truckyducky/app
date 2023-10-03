@@ -22,11 +22,10 @@ This knowledge graph categorizes the CDEs into three primary sectors - General H
   - Selecting a primary node will unfold a new set of subcategory nodes, each depicted as deep purple nodes. These subcategories are central connecting points, serving as central links between primary nodes and the specific CDEs.
       - General Health: this node unfolds into six subcategories: Patient Health, Pain, Sleep, Substance Use, Mental Health, and Quality of Life, each depicted as purple oval nodes
       - Demographics: this node unfolds into three subcategories by age range: Adults, Adolescents, and Pediatrics, each depicted as purple oval nodes
-      - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes
+      - Research Programs: this node unfolds into the 13 HEAL Pain Research Programs, each depicted as purple triangle nodes. 
+          - Selecting a specific HEAL Pain Research Program further unfolds into specific study names, allowing users to discern CDE applications at the individual study level. 
 This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, easing identification of patterns, relationships, and focal points of interest. 
-  - The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
-      - Continual efforts are underway to introduce specific study names as a new subcategory node, allowing users to discern CDEapplications at the individual study level, expanding beyond the existing capability to visualize CDE use solely at the research program level.
-
+The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
  '''
 st.markdown(multi)
 
