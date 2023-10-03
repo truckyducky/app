@@ -26,6 +26,7 @@ This knowledge graph categorizes the CDEs into three primary sectors - General H
           - Selecting a specific HEAL Pain Research Program further unfolds into specific study names, allowing users to discern CDE applications at the individual study level. 
 
 This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, easing identification of patterns, relationships, and focal points of interest. 
+
 The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
  '''
 st.markdown(multi)
