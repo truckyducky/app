@@ -27,6 +27,7 @@ for i in range(0, len(list_of_ppl_descriptors), 6):
 # for entry in formatted_data:
 #     print(entry)
 
+st.title("Ice Breaker Activity") 
 
 def create_knowledge_graph(data):
     # Create a network
@@ -58,7 +59,7 @@ def create_knowledge_graph(data):
 
 create_knowledge_graph(formatted_data)
 
-
+ 
 
 # Save and read graph as HTML file (on Streamlit Sharing)
 try:
