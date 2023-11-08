@@ -3,4 +3,4 @@ pandas
 networkx
 pyvis
 datapane
-collections
+
