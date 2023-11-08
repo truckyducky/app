@@ -8,7 +8,7 @@ from pyvis.network import Network
 from IPython.core.display import display, HTML
 
 
-descriptors_data = pd.read_csv(r"/Users/trucpham/Downloads/HEAL icebreaker kg 11_04_23.csv")
+descriptors_data = pd.read_csv("app/HEAL icebreaker kg 11_04_23.csv")
 df = pd.DataFrame(descriptors_data, columns = ["Text"])
 
 
