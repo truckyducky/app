@@ -58,21 +58,21 @@ def create_knowledge_graph(data):
 create_knowledge_graph(formatted_data)
 
 
-# Save and read graph as HTML file (on Streamlit Sharing)
+# Load HTML file in HTML component for display on Streamlit page
 try:
     path = '/tmp'
-    net.save_graph(f'{path}/ice_breaker.html')
-    HtmlFile = open(f'{path}/ice_breaker.html', 'r', encoding='utf-8')
+    html_path = f'{path}/ice_breaker.html'
 
-    # Load HTML file in HTML component for display on Streamlit page
-    components.html(HtmlFile.read(), height=1000, width=1000)
+    with open(html_path, 'r', encoding='utf-8') as HtmlFile:
+        html_content = HtmlFile.read()
+
+    components.html(html_content, height=1000, width=1000)
 
 except FileNotFoundError:
-    st.warning("HTML file not found.")
+    st.warning(f"HTML file not found at {html_path}.")
 except Exception as e:
-    st.error(f"An error occurred: {e}")
-finally:
-    HtmlFile.close()
+    st.error(f"An error occurred while reading the HTML file: {e}")
+
 
 
 
