@@ -27,7 +27,7 @@ for i in range(0, len(list_of_ppl_descriptors), 6):
 # for entry in formatted_data:
 #     print(entry)
 
-net = Network(notebook=True, width="1000px", height="600px", cdn_resources='remote', font_color='white', bgcolor="black")
+net = Network(notebook=True, width="1000px", height="600px", cdn_resources='remote', font_color='white', bgcolor="black", select_menu = True, filter_menu = True)
 st.title('Ice Breaker Activity')
 def create_knowledge_graph(data):
 
