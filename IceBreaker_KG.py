@@ -27,10 +27,9 @@ for i in range(0, len(list_of_ppl_descriptors), 6):
 # for entry in formatted_data:
 #     print(entry)
 
+net = Network(notebook=True, width="1000px", height="600px", cdn_resources='remote', font_color='white', bgcolor="black")
 
 def create_knowledge_graph(data):
-    # Create a network
-    net = Network(notebook=True, width="1000px", height="600px", cdn_resources = 'remote', font_color = 'white', bgcolor = "black")
 
     # Flatten the data to get a list of all descriptors
     all_descriptors = [descriptor for entry in data for descriptor in entry[1:]]
