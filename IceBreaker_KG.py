@@ -59,11 +59,20 @@ def create_knowledge_graph(data):
 create_knowledge_graph(formatted_data)
 
 
+# Save and read graph as HTML file (on Streamlit Sharing)
+try:
+    path = '/tmp'
+    net.save_graph(f'{path}/ice_breaker.html')
+    HtmlFile = open(f'{path}/ice_breaker.html', 'r', encoding='utf-8')
 
+# Save and read graph as HTML file (locally)
+except:
+    path = '/html_files'
+    net.save_graph(f'{path}/ice_breaker.html')
+    HtmlFile = open(f'{path}/ice_breaker.html', 'r', encoding='utf-8')
 
-net.save_graph(f'ice_breaker.html')
-st.header('Ice Breaker Activity')
-HtmlFile = open(f'ice_breaker.html','r',encoding='utf-8')
+# Load HTML file in HTML component for display on Streamlit page
+components.html(HtmlFile.read(), height=1000, width = 1000)
 
 # Load HTML into HTML component for display on Streamlit
 components.html(HtmlFile.read(), height=800, width=800)
