@@ -58,7 +58,7 @@ def create_knowledge_graph(data):
 
 create_knowledge_graph(formatted_data)
 
-net.show('ice_breaker.html', local=False)
+
 
 # Save and read graph as HTML file (on Streamlit Sharing)
 try:
