@@ -75,5 +75,5 @@ try:
 # Load HTML file in HTML component for display on Streamlit page
 components.html(HtmlFile.read(), height=1000, width = 1000)
 
-# Load HTML into HTML component for display on Streamlit
-components.html(HtmlFile.read(), height=800, width=800)
+# # Load HTML into HTML component for display on Streamlit
+# components.html(HtmlFile.read(), height=800, width=800)
