@@ -74,8 +74,6 @@ except Exception as e:
     st.error(f"An error occurred while reading the HTML file: {e}")
 
 
-
-
 # # Save and read graph as HTML file (on Streamlit Sharing)
 # try:
 #     path = '/tmp'
