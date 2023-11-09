@@ -28,7 +28,7 @@ for i in range(0, len(list_of_ppl_descriptors), 6):
 #     print(entry)
 
 net = Network(notebook=True, width="1000px", height="600px", cdn_resources='remote', font_color='white', bgcolor="black")
-
+st.title('Ice Breaker Activity')
 def create_knowledge_graph(data):
 
     # Flatten the data to get a list of all descriptors
