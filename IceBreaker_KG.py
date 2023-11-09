@@ -63,7 +63,7 @@ try:
     html_path = f'{path}/ice_breaker.html'
 
     net.save_graph(html_path)
-    st.write(f"HTML file saved at {html_path}")
+    #st.write(f"HTML file saved at {html_path}")
 
     with open(html_path, 'r', encoding='utf-8') as HtmlFile:
         html_content = HtmlFile.read()
