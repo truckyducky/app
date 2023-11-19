@@ -31,7 +31,7 @@ The graph is continually being refined for optimized logical coherence and searc
  '''
 st.markdown(multi)
 
-net = Network(notebook = True, cdn_resources="remote",height="800px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "#373a3c")
+net = Network(notebook = True, cdn_resources="remote",height="800px", width="100%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "black")
 
 #add categorical/subcategorical nodes
 net.add_nodes(['Node 1 - General Health', 
