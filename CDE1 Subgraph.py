@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[20]:
-
-
+#setting up packages 
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
@@ -11,25 +7,13 @@ import networkx as nx
 from pyvis.network import Network
 from IPython.core.display import display, HTML
 
-
-# In[21]:
-
-
 network = Network(notebook = True, cdn_resources="remote",height="900px", width="90%", select_menu = True, filter_menu=True,font_color="white", bgcolor = "black")
 
-network.show("network.html")
 
-
-# In[22]:
 
 
 network.add_node('Node 1 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]',  
               title = 'Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]', color = '#e07c3e')
-
-network.show("network.html")
-
-
-# In[23]:
 
 
 #net.add_node('Node 50 - SPRINT: Signature for Pain Recovery IN Teens', label ='SPRINT: Signature for Pain Recovery IN Teens', title = 'SPRINT: Signature for Pain Recovery IN Teens', shape = 'text', group = 1)
@@ -51,11 +35,6 @@ network.add_nodes(['Node 2 - SPRINT: Signature for Pain Recovery IN Teens', 'Nod
 
 )
 
-network.show("network.html")
-
-
-# In[25]:
-
 
 network.add_edges([
     ('Node 1 - Adolescent Sleep Wake Scale - Short Form + Sleep Pattern/Duration [ASWS-SF + Sleep Duration]','Node 2 - SPRINT: Signature for Pain Recovery IN Teens'),
@@ -70,13 +49,20 @@ network.add_edges([
 network.show("edges.html")
 
 
-# In[ ]:
+# Save and read graph as HTML file (on Streamlit Sharing)
+try:
+    path = '/tmp'
+    net.save_graph(f'{path}/pyvis_graph.html')
+    HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
+# Save and read graph as HTML file (locally)
+except:
+    path = '/html_files'
+    net.save_graph(f'{path}/pyvis_graph.html')
+    HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
-
-
-
-# In[ ]:
+# Load HTML file in HTML component for display on Streamlit page
+components.html(HtmlFile.read(), height=1000, width = 1000)
 
 
 
