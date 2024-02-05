@@ -28,6 +28,7 @@ This knowledge graph categorizes the CDEs into three primary sectors - General H
 This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, easing identification of patterns, relationships, and focal points of interest. 
 
 The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
+https://o7aje3pewgasknwjwdgdwt.streamlit.app/ 
  '''
 st.markdown(multi)
 
