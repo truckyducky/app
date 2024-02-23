@@ -12,7 +12,8 @@ network.add_node('Node 13 - Brief Pain Inventory - Interference [BPI-Interferenc
 
 ## add study names for Node 13 - Brief Pain Inventory - Interference [BPI-Interference]
 
-network.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery', 
+network.add_nodes(['Node 50 - SPRINT: Signature for Pain Recovery IN Teens', 'Node 51 - SurgeryPal', 'Node 54 - Latinx Children and Surgery',
+                   'Node 55 - Transition from Acute to Chronic Pain After Thoracic Surgery', 
                'Node 56 - Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain', 
                'Node 57 - Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',  
                'Node 58 - Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
@@ -29,7 +30,7 @@ network.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thorac
                'Node 69 - HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
                'Node 70 - INTERCEPT: Integrated Research Center for human Pain Tissues',
                'Node 71 - Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
-    label = ['Transition from Acute to Chronic Pain After Thoracic Surgery',
+    label = ['SPRINT: Signature for Pain Recovery IN Teens', 'SurgeryPal', 'Latinx Children and Surgery', 'Transition from Acute to Chronic Pain After Thoracic Surgery',
              'Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain',
              'Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',
              'Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
@@ -46,7 +47,7 @@ network.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thorac
              'HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
              'INTERCEPT: Integrated Research Center for human Pain Tissues',
              'Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
-    title = ['Transition from Acute to Chronic Pain After Thoracic Surgery',
+    title = ['SPRINT: Signature for Pain Recovery IN Teens', 'SurgeryPal', 'Latinx Children and Surgery', 'Transition from Acute to Chronic Pain After Thoracic Surgery',
              'Development, Evaluation and Translation of Robotic Apparel for Alleviating Low Back Pain',
              'Biomarker Signature to Predict the Persistence of Post-Traumatic Headache',
              'Discovery and Analytical Validation of Inflammatory Bio-Signatures of the Human Pain Experience',
@@ -63,7 +64,7 @@ network.add_nodes(['Node 55 - Transition from Acute to Chronic Pain After Thorac
              'HEAL Initiative: Developing Quantitative Imaging and Other Relevant Biomarkers of Myofascial Tissues for Clinical Pain Management',
              'INTERCEPT: Integrated Research Center for human Pain Tissues',
              'Fibromyalgia TENS in Physical Therapy Study (TIPS):an embedded pragmatic clinical trial'],
-    shape = ['text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text']
+    shape = ['text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text','text', 'text', 'text', 'text']
 
 )
 
@@ -94,6 +95,7 @@ network.add_edges([
 ]
 )
 
+network.repulsion(spring_strength = 0)
 
 
 network.show("edges.html")
