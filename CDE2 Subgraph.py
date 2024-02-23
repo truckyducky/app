@@ -94,7 +94,6 @@ network.add_edges([
 ]
 )
 
-network.repulsion(spring_strength = 0)
 
 
 network.show("edges.html")
