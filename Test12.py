@@ -32,10 +32,10 @@ net.add_nodes(['SPRINT: Signature for Pain Recovery IN Teens',
 
 
 #'Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]'
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','SurgeryPal'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','SurgeryPal')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 21 - NIDA Modified Assist Tool - 2 [NIDA Assist-2 Modified]','Latinx Children and Surgery')
 
 net.repulsion(spring_strength = 0)       
