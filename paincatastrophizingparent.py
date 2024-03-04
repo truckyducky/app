@@ -33,10 +33,10 @@ net.add_nodes(['SPRINT: Signature for Pain Recovery IN Teens',
 
 ##'Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]'
 
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','SurgeryPal'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','SurgeryPal')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 23 - Pain Catastrophizing Scale - Parent [PCS-Parent]','Latinx Children and Surgery')
 
 
