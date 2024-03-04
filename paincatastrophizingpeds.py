@@ -30,10 +30,10 @@ net.add_nodes(['SPRINT: Signature for Pain Recovery IN Teens',
 )
 
 #'Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]'
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','SPRINT: Signature for Pain Recovery IN Teens'),
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','SurgeryPal'),
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma'),
-net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Integrative Training Program for Pediatric Sickle Cell Pain'),
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','SPRINT: Signature for Pain Recovery IN Teens')
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','SurgeryPal')
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Culturally adapted mobile treatment of chronic pain in adolescent survivors of pediatric bone sarcoma')
+net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Integrative Training Program for Pediatric Sickle Cell Pain')
 net.add_edge('Node 24 - Pain Catastrophizing Scale - Pediatric [PCS-Peds]','Latinx Children and Surgery')
 
 net.repulsion(spring_strength = 0)       
