@@ -28,7 +28,30 @@ This knowledge graph categorizes the CDEs into three primary sectors - General H
 This interactive knowledge graph is designed to let researchers highlight and explore individual nodes and their connections, even without a technical background. Users can search and navigate through the graph using simple properties like color, shape, and size, easing identification of patterns, relationships, and focal points of interest. 
 
 The graph is continually being refined for optimized logical coherence and search efficacy, making it more accessible and intuitive for users.
-https://o7aje3pewgasknwjwdgdwt.streamlit.app/ 
+
+
+Click on links to view subgraphs of CDEs and their respective connections to study names:
+
+- https://adolescentsleepwakescale.streamlit.app/
+- https://briefpaininterference.streamlit.app/
+- https://briefpainseverity.streamlit.app/
+- https://demographicsadult.streamlit.app/
+- https://demographicsadultrevised.streamlit.app/
+- https://demographicspediatric.streamlit.app/
+- https://demographicspediatricrevised.streamlit.app/
+- https://genanxietydisorder2.streamlit.app/
+- https://genanxietydisorder7.streamlit.app/
+- https://paincatastrophizing13.streamlit.app/
+- https://paincatastrophizingparent.streamlit.app/
+- https://paincatastrophizingpeds.streamlit.app/
+- https://paincatastrophizingshortform6.streamlit.app/
+- https://painenjoymentactivity.streamlit.app/
+- https://patientglobalimpression.streamlit.app/
+- https://patienthealthquestionnaire2.streamlit.app/
+- https://patienthealthquestionnaire8.streamlit.app/
+- https://patienthealthquestionnaire9.streamlit.app/
+- https://pedsqualityoflife.streamlit.app/
+- https://promisphysicalfunction6.streamlit.app/
  '''
 st.markdown(multi)
 
