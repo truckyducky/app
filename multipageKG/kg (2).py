@@ -57,6 +57,8 @@ For more information on using the filter feature, [explanation below](#selecting
         
 """, unsafe_allow_html=True)
 
+st.sidebar.success("Select a demo above.")
+
 def create_knowledge_graph(data, columns):
     # Flatten the data to get a list of all descriptors
     all_descriptors = [descriptor for entry in data for descriptor in entry[1:]]
